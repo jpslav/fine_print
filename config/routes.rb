@@ -1,5 +1,5 @@
 FinePrint::Engine.routes.draw do
-  root :to => 'home#index'
+  root controller: 'home', action: 'index'
 
   resources :contracts do
     resources :signatures, :only => [:index, :new, :create, :destroy], :shallow => true
